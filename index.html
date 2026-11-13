@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte | Cuadros Hechos a Mano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">Arte<span>Vivo</span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#galeria">Colección</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><button id="cart-btn" class="cart-trigger">Carrito (<span id="cart-count">0</span>)</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Pinceladas de Alma en cada Lienzo</h2>
+                    <p>Colección exclusiva de cuadros pintados a mano. Arte único para espacios con personalidad.</p>
+                    <a href="#galeria" class="btn-primary">Ver Colección</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Colección Disponible</h3>
+                    <p>Cada pieza es única y se entrega con certificado de autenticidad.</p>
+                </div>
+                <div id="art-grid" class="art-grid">
+                    <!-- Los cuadros se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrito Modal/Sidebar -->
+    <div id="cart-overlay" class="overlay"></div>
+    <aside id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Tu Pedido</h3>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Items del carrito -->
+        </div>
+        <div class="sidebar-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="total-price">$0</span>
+            </div>
+            <button id="checkout-btn" class="btn-checkout">Continuar Pedido</button>
+        </div>
+    </aside>
+
+    <!-- Formulario de Pedido Modal -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <h3>Finalizar Pedido</h3>
+            <p>Completa tus datos para enviarte los detalles de pago y envío.</p>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" required placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección de Envío</label>
+                    <textarea id="address" required placeholder="Calle, número, ciudad..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Enviar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ArteVivo - Cuadros Pintados a Mano. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
